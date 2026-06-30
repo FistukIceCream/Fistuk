@@ -293,7 +293,9 @@ ul { list-style: none; }
 .footer__grid a { color: rgba(247,241,228,0.82); font-size: 1.02rem; }
 .footer__grid a:hover { color: var(--gold-l); }
 .footer__bottom { max-width: var(--maxw); margin-inline: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.86rem; color: rgba(247,241,228,0.55); }
-.footer__credit { color: var(--gold-l); font-weight: 600; }
+.footer__credit { color: rgba(247,241,228,0.55); }
+.footer__credit a { color: var(--gold-l); font-weight: 700; }
+.footer__credit a:hover { text-decoration: underline; }
 
 /* ============================ REVEAL STATES ============================ */
 [data-reveal] { opacity: 0; transform: translateY(34px); }
@@ -314,8 +316,8 @@ ul { list-style: none; }
   .nav__links { display: none; }
   .menu__grid { grid-template-columns: 1fr; }
   .visit__grid { grid-template-columns: 1fr; }
-  .taste { align-items: end; justify-items: stretch; min-height: clamp(600px, 92svh, 820px); }
-  .taste__wash { background: linear-gradient(to top, var(--cream) 0%, var(--cream) 30%, rgba(247,241,228,0.86) 50%, rgba(247,241,228,0.15) 78%, transparent 92%); }
+  .taste { align-content: end; justify-items: stretch; min-height: clamp(560px, 86svh, 760px); }
+  .taste__wash { background: linear-gradient(to top, var(--cream) 0%, var(--cream) 34%, rgba(247,241,228,0.86) 54%, rgba(247,241,228,0.15) 80%, transparent 94%); }
   .taste__text { max-width: none; }
   .card { min-height: auto; }
   .hero__cta { flex-direction: column; align-items: stretch; }

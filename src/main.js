@@ -106,10 +106,13 @@ function heroIntro() {
 function runLoader() {
   const loader = document.getElementById('loader');
   const bar = loader ? loader.querySelector('.loader__bar span') : null;
+  let done = false;
   const finish = () => {
+    if (done) return;
+    done = true;
     document.body.classList.remove('is-loading');
     document.body.classList.add('is-ready');
-    if (loader) loader.classList.add('is-done');
+    if (loader) { loader.classList.add('is-done'); gsap.set(loader, { yPercent: -100 }); }
     heroIntro();
     ScrollTrigger.refresh();
   };
@@ -117,6 +120,8 @@ function runLoader() {
   const tl = gsap.timeline({ onComplete: finish });
   tl.to(bar, { width: '100%', duration: 1.0, ease: 'power2.inOut' })
     .to(loader, { yPercent: -100, duration: 0.8, ease: 'power4.inOut' }, '+=0.1');
+  // safety net: never trap the visitor if the rAF ticker is throttled (e.g. background tab)
+  setTimeout(finish, 4000);
 }
 
 /* --------------------------------- boot ---------------------------------- */
