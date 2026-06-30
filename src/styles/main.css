@@ -76,6 +76,13 @@ ul { list-style: none; }
 ::selection { background: var(--gold); color: var(--green-900); }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 4px; }
 
+/* brand-coloured scrollbar */
+html { scrollbar-color: var(--gold) var(--green-900); scrollbar-width: thin; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--green-900); }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--gold-l), var(--gold) 45%, var(--gold-d)); border-radius: 10px; border: 3px solid var(--green-900); }
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #fff6da, var(--gold-l) 50%, var(--gold)); }
+
 /* ---------- living gold fill (masked logos) ---------- */
 .gold-fill {
   background-image: linear-gradient(100deg,
@@ -166,7 +173,7 @@ ul { list-style: none; }
 .nav.is-scrolled { background: rgba(14, 28, 20, 0.72); backdrop-filter: blur(14px) saturate(1.2); padding-block: clamp(10px, 1.6vw, 16px); box-shadow: 0 1px 0 rgba(255,255,255,0.06); }
 .nav__brand { display: inline-flex; align-items: center; gap: 12px; }
 .nav__mark { width: 38px; }
-.nav__name { font-family: var(--f-display); font-size: 1.5rem; color: var(--cream); transition: color 0.5s var(--ease); }
+.nav__word { height: clamp(17px, 3.6vw, 23px); aspect-ratio: 1076 / 206; -webkit-mask: url(../assets/brand/brandword.png) center / contain no-repeat; mask: url(../assets/brand/brandword.png) center / contain no-repeat; }
 .nav__links { display: flex; gap: clamp(16px, 2.4vw, 34px); }
 .nav__links a { position: relative; font-weight: 500; font-size: 1rem; color: rgba(247, 241, 228, 0.85); padding-block: 4px; }
 .nav__links a::after { content: ''; position: absolute; inset-inline: 0; bottom: -2px; height: 1.5px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform 0.4s var(--ease); }
