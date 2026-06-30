@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>פיסטוק · גלידה איטלקית בחדרה</title>
+  <meta name="description" content="פיסטוק, גלידריה איטלקית בלב חדרה. גלידה, פרוזן יוגורט, יוגורט ותוספות, ופל בלגי, קרפים ופרי שייק. הרברט סמואל 47, חדרה." />
+  <meta name="theme-color" content="#0f1f17" />
+  <meta property="og:title" content="פיסטוק · גלידה איטלקית בחדרה" />
+  <meta property="og:description" content="גלידה איטלקית אמיתית, נוצרת אצלנו טרי כל יום. בלב חדרה." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23a9c6a0'/%3E%3Ccircle cx='16' cy='16' r='15' fill='none' stroke='%23c9a24b' stroke-width='2'/%3E%3Ctext x='16' y='22' font-size='17' text-anchor='middle' fill='%23c9a24b' font-family='serif' font-weight='700'%3E%D7%A4%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Intro loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark gold-fill" data-mark></div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__ring"></div>
+    <div class="cursor__dot"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero" data-cursor>
+      <span class="nav__mark gold-fill" data-mark></span>
+      <span class="nav__name">פיסטוק</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#taste" data-cursor>הטעם</a>
+      <a href="#menu" data-cursor>התפריט</a>
+      <a href="#signature" data-cursor>פיסטוק</a>
+      <a href="#visit" data-cursor>בקרו אותנו</a>
+    </nav>
+    <a class="nav__cta" href="#visit" data-cursor data-magnetic>
+      <span>נווטו אלינו</span>
+    </a>
+  </header>
+
+  <main>
+    <!-- HERO: living pistachio gradient, cursor-reactive -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="hero-gradient" aria-hidden="true"></canvas>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <h1 class="sr-only">פיסטוק · גלידה איטלקית בחדרה</h1>
+      <div class="hero__inner">
+        <p class="hero__eyebrow" data-hero="1"><span>גלידה איטלקית</span><i></i><span>חדרה</span></p>
+        <div class="hero__lockup" data-hero="2">
+          <div class="lockup__mark gold-fill" data-mark></div>
+          <div class="lockup__word gold-fill" role="img" aria-label="פיסטוק, גלידה איטלקית"></div>
+        </div>
+        <p class="hero__sub" data-hero="3">גלידה איטלקית, פרוזן יוגורט, ופל בלגי, קרפים ופרי שייק. הכול נעשה אצלנו, טרי, באהבה.</p>
+        <div class="hero__cta" data-hero="4">
+          <a class="btn btn--solid" href="#menu" data-cursor data-magnetic><span>גלו את התפריט</span></a>
+          <a class="btn btn--ghost" href="#visit" data-cursor data-magnetic><span>נווטו אלינו</span></a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#taste" data-cursor aria-label="גללו למטה">
+        <span>גללו לטעימה</span>
+        <i></i>
+      </a>
+    </section>
+
+    <!-- FLAVOR MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-marquee>
+        <span>פיסטוק חלבי</span><i>•</i><span>וניל מאדגסקר</span><i>•</i><span>שוקולד בלגי</span><i>•</i>
+        <span>קרמל מלוח</span><i>•</i><span>תות שדה</span><i>•</i><span>אגוז לוז</span><i>•</i>
+        <span>לימון בזיליקום</span><i>•</i><span>קוקוס</span><i>•</i>
+      </div>
+    </section>
+
+    <!-- TASTE: full-bleed spread with a soft cream wash under the text -->
+    <section class="taste" id="taste">
+      <div class="taste__bg" data-parallax="0.1" aria-hidden="true"></div>
+      <div class="taste__wash" aria-hidden="true"></div>
+      <div class="taste__text">
+        <p class="eyebrow" data-reveal>פיסטוק · חדרה</p>
+        <h2 class="taste__title reveal-line">טעם איטלקי אמיתי,<br />בכל כדור.</h2>
+        <p class="taste__lead" data-reveal>אצלנו לא קונים גלידה מוכנה. מכינים אותה. מרקם קטיפתי שנמס לאט, טעמים עמוקים שנשארים איתכם, וכל בוקר מתחילים מחדש כדי שתקבלו את הטרי ביותר.</p>
+        <ul class="values" data-reveal>
+          <li>חומרי גלם אמיתיים</li>
+          <li>נוצר טרי כל יום</li>
+          <li>שיטה איטלקית</li>
+          <li>אהבה מחדרה</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+      <div class="menu__head">
+        <p class="eyebrow" data-reveal>התפריט</p>
+        <h2 class="section-title reveal-line">מה מתחשק לכם היום?</h2>
+        <p class="menu__intro" data-reveal>שבע דרכים להתמכר. כל אחת מהן נעשית אצלנו, מהכדור הראשון ועד התוספת האחרונה.</p>
+      </div>
+
+      <div class="menu__grid">
+        <article class="card" data-tilt data-reveal>
+          <div class="card__media card__media--gelato"></div>
+          <div class="card__body">
+            <span class="card__no">01</span>
+            <h3>גלידה איטלקית</h3>
+            <p>עשרות טעמים במרקם קטיפתי שנמס לאט. מהקלאסיקה ועד הטעמים שרק אצלנו תמצאו.</p>
+            <span class="card__tag">המנה החתומה שלנו</span>
+          </div>
+        </article>
+
+        <article class="card" data-tilt data-reveal>
+          <div class="card__media card__media--froyo"></div>
+          <div class="card__body">
+            <span class="card__no">02</span>
+            <h3>פרוזן יוגורט</h3>
+            <p>קליל, חמצמץ ומרענן. בדיוק מה שצריך ביום חם, עם נגיעה מתוקה.</p>
+            <span class="card__tag">קליל ומפנק</span>
+          </div>
+        </article>
+
+        <article class="card" data-tilt data-reveal>
+          <div class="card__media card__media--yogurt"></div>
+          <div class="card__body">
+            <span class="card__no">03</span>
+            <h3>יוגורט ותוספות</h3>
+            <p>יוגורט עשיר, מתחת להר של פירות טריים, גרנולה פריכה ורטבים מתוקים. אתם בוחרים.</p>
+            <span class="card__tag">בחרו תוספות</span>
+          </div>
+        </article>
+
+        <article class="card" data-tilt data-reveal>
+          <div class="card__media card__media--waffle"></div>
+          <div class="card__body">
+            <span class="card__no">04</span>
+            <h3>ופל בלגי</h3>
+            <p>פריך מבחוץ, אוורירי מבפנים, מוצף ברוטב שוקולד ומעוטר בכדור גלידה לבחירתכם.</p>
+            <span class="card__tag">חם וטרי</span>
+          </div>
+        </article>
+
+        <article class="card" data-tilt data-reveal>
+          <div class="card__media card__media--crepe"></div>
+          <div class="card__body">
+            <span class="card__no">05</span>
+            <h3>קרפים</h3>
+            <p>דקיק, חם וממולא בכל מה שאתם אוהבים. שוקולד נמס, פירות, גלידה וכל מה שביניהם.</p>
+            <span class="card__tag">ממולא כאוות נפשכם</span>
+          </div>
+        </article>
+
+        <article class="card" data-tilt data-reveal>
+          <div class="card__media card__media--shake"></div>
+          <div class="card__body">
+            <span class="card__no">06</span>
+            <h3>פרי שייק</h3>
+            <p>פירות טריים שנטחנים למשקה קריר ומפנק. הדרך המושלמת לצנן את היום.</p>
+            <span class="card__tag">קריר ומרענן</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SIGNATURE: the pistachio namesake -->
+    <section class="signature" id="signature">
+      <canvas class="signature__canvas" id="pistachio-canvas" aria-hidden="true"></canvas>
+      <div class="signature__inner">
+        <div class="signature__text">
+          <p class="eyebrow eyebrow--gold" data-reveal>החתימה של הבית</p>
+          <h2 class="signature__title" data-reveal>גלידת הפיסטוק</h2>
+          <p class="signature__lead" data-reveal>
+            הטעם שעל שמו נקראנו. פיסטוק אמיתי, נטחן עד שהוא הופך לקרם, ומתערבב לגלידה עשירה,
+            אגוזית ועמוקה. כדור אחד וכבר הבנתם למה התעקשנו על השם.
+          </p>
+          <a class="btn btn--solid" href="#visit" data-cursor data-magnetic><span>בואו לטעום</span></a>
+        </div>
+        <div class="signature__visual" data-tilt>
+          <div class="signature__photo"></div>
+          <div class="signature__ring gold-stroke"></div>
+          <div class="signature__seal gold-fill" data-mark></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONES STRIP -->
+    <section class="cones">
+      <div class="cones__bg" data-parallax="0.22" aria-hidden="true"></div>
+      <div class="cones__veil" aria-hidden="true"></div>
+      <div class="cones__inner">
+        <h2 class="cones__line reveal-line">מהקרמל ועד הקונוס,<br />הכול נעשה כאן.</h2>
+        <p data-reveal>קונים פריכים, רטבים, תוספות. הכול אצלנו, טרי, בלי פשרות.</p>
+      </div>
+    </section>
+
+    <!-- VISIT / CONTACT -->
+    <section class="visit" id="visit">
+      <div class="visit__inner">
+        <div class="visit__head">
+          <p class="eyebrow eyebrow--gold" data-reveal>מתחשק לכם עכשיו?</p>
+          <h2 class="visit__title reveal-line">בואו אלינו, אנחנו מחכים.</h2>
+          <div class="visit__status" data-open-now>
+            <span class="dot"></span><span data-open-label>בודק שעות פתיחה...</span>
+          </div>
+        </div>
+
+        <div class="visit__grid">
+          <a class="info info--map" href="https://www.google.com/maps/search/?api=1&query=%D7%94%D7%A8%D7%91%D7%A8%D7%98%20%D7%A1%D7%9E%D7%95%D7%90%D7%9C%2047%20%D7%97%D7%93%D7%A8%D7%94" target="_blank" rel="noopener" data-cursor data-reveal data-tilt>
+            <span class="info__label">הכתובת</span>
+            <span class="info__value">הרברט סמואל 47, חדרה</span>
+            <span class="info__cta">פתחו ניווט במפות ←</span>
+          </a>
+
+          <a class="info" href="tel:046222465" data-cursor data-reveal data-tilt>
+            <span class="info__label">טלפון</span>
+            <span class="info__value">04-622-2465</span>
+            <span class="info__cta">חייגו אלינו ←</span>
+          </a>
+
+          <div class="info info--hours" data-reveal data-tilt>
+            <span class="info__label">שעות פתיחה</span>
+            <ul class="hours">
+              <li data-day="0,1,2,3,4"><span>ראשון עד חמישי</span><b>08:30 – 22:30</b></li>
+              <li data-day="5"><span>שישי</span><b>08:30 – 17:00</b></li>
+              <li data-day="6"><span>שבת</span><b>20:00 – 00:00</b></li>
+            </ul>
+          </div>
+
+          <a class="info info--ig" href="https://www.instagram.com/fistuk_hadera/" target="_blank" rel="noopener" data-cursor data-reveal data-tilt>
+            <span class="info__label">עקבו אחרינו</span>
+            <span class="info__value">@fistuk_hadera</span>
+            <span class="info__cta">אינסטגרם ←</span>
+          </a>
+        </div>
+
+        <div class="visit__actions" data-reveal>
+          <a class="btn btn--solid btn--lg" href="https://waze.com/ul?q=%D7%94%D7%A8%D7%91%D7%A8%D7%98%20%D7%A1%D7%9E%D7%95%D7%90%D7%9C%2047%20%D7%97%D7%93%D7%A8%D7%94&navigate=yes" target="_blank" rel="noopener" data-cursor data-magnetic><span>נווטו ב‑Waze</span></a>
+          <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/search/?api=1&query=%D7%94%D7%A8%D7%91%D7%A8%D7%98%20%D7%A1%D7%9E%D7%95%D7%90%D7%9C%2047%20%D7%97%D7%93%D7%A8%D7%94" target="_blank" rel="noopener" data-cursor data-magnetic><span>פתחו ב‑Google Maps</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <span class="footer__mark gold-fill" data-mark></span>
+        <div class="footer__word gold-fill" role="img" aria-label="פיסטוק, גלידה איטלקית"></div>
+      </div>
+      <p class="footer__tag">גלידה איטלקית אמיתית, נוצרת אצלנו טרי כל יום.</p>
+    </div>
+    <div class="footer__grid">
+      <a href="https://www.google.com/maps/search/?api=1&query=%D7%94%D7%A8%D7%91%D7%A8%D7%98%20%D7%A1%D7%9E%D7%95%D7%90%D7%9C%2047%20%D7%97%D7%93%D7%A8%D7%94" target="_blank" rel="noopener" data-cursor>הרברט סמואל 47, חדרה</a>
+      <a href="tel:046222465" data-cursor>04-622-2465</a>
+      <a href="https://www.instagram.com/fistuk_hadera/" target="_blank" rel="noopener" data-cursor>@fistuk_hadera</a>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> פיסטוק · כל הזכויות שמורות</span>
+      <a class="footer__credit" href="#hero" data-cursor>עיצוב ובנייה · Elevate</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

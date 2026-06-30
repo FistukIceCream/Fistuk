@@ -1,0 +1,21 @@
+{
+  "name": "fistuk-gelato",
+  "private": true,
+  "version": "1.0.0",
+  "description": "פיסטוק — גלידה איטלקית, חדרה. Bespoke cinematic Hebrew/RTL site.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "optimize": "node scripts/optimize-images.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.1.18"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5",
+    "vite": "^5.4.10"
+  }
+}
